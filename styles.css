@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* || VARIABLES COLORS FONTS RESET GENERAL STYLES */
+:root {
+  /*  COLORS */
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+
+  /* FONTS */
+  --ff-big-shoulders-display: "Big Shoulders Display", sans-serif;
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+}
+
+/* || RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* || UTITLITY CLASSES */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* || GENERAL STYLES */
+html {
+  font-family: var(--ff-lexend-deca);
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--clr-very-light-gray);
+  display: grid;
+  margin-inline: 1.5rem;
+  min-height: 100vh;
+  place-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 60rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article {
+  padding: 3rem;
+}
+
+article h1 {
+  color: var(--clr-very-light-gray);
+  font-family: var(--ff-big-shoulders-display);
+  font-size: 2.5rem;
+  margin-bottom: 0.8em;
+  margin-top: 0.8em;
+  text-transform: uppercase;
+}
+
+article p {
+  color: var(--clr-transparent-white);
+  line-height: 1.6;
+}
+
+article button {
+  background-color: var(--clr-very-light-gray);
+  border-radius: 30px;
+  border: 2px solid var(--clr-transparent-white);
+  margin-top: 6em;
+  padding: 1em 2.2em;
+  transition: 0.5s;
+}
+
+article button:hover {
+  background-color: transparent;
+  border: 2px solid var(--clr-transparent-white);
+  color: var(--clr-transparent-white);
+}
+
+.first-article {
+  background-color: var(--clr-bright-orange);
+}
+
+.first-article button {
+  color: var(--clr-bright-orange);
+}
+
+.second-article {
+  background-color: var(--clr-dark-cyan);
+}
+
+.second-article button {
+  color: var(--clr-dark-cyan);
+}
+
+.third-article {
+  background-color: var(--clr-very-dark-cyan);
+}
+
+.third-article button {
+  color: var(--clr-very-dark-cyan);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  article button {
+    margin-top: 2em;
+  }
+}
